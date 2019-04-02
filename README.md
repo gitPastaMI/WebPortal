@@ -1,2 +1,2 @@
-# NodePortal
-Web Portal with backend (Express) and frontend (Vue)
+# WebPortal
+Web Portal with Node backend (Express) and frontend (Vue)
