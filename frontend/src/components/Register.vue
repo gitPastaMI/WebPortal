@@ -12,7 +12,7 @@
     <button type="button"
             name="button"
             v-on:click="register">OK</button>
-    <h2>{{msg}}</h2>
+    <h2>{{error}}</h2>
   </div>
 </template>
 
@@ -25,13 +25,13 @@ export default {
         username: '',
         password: ''
       },
-      msg: ''
+      error: null
     }
   },
   methods: {
     async register () {
       let res = await AuthService.register(this.credentials)
-      this.msg = res.data.msg
+      this.error = res.data.error
     }
   }
 }

@@ -7,4 +7,4 @@ Web Portal with Node backend (Express) and frontend (Vue)
 \WebPortal\mkdir backend
 
 \Webportal\backend\npm init
-\Webportal\backend\npm install express cors morgan -save
+\Webportal\backend\npm install express cors morgan sequelize sequelize-oracle -save

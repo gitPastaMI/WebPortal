@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <button type="button" name="button"><router-link :to="{ name: 'register', params: {} }">Sign up</router-link></button>
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
