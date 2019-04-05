@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Register</h1>
+    <h1>Login</h1>
     <input type="text"
            name="username"
            placeholder="username"
@@ -11,7 +11,7 @@
            v-model="credentials.password">
     <button type="button"
             name="button"
-            v-on:click="register">OK</button>
+            v-on:click="login">OK</button>
     <h2>{{error}}</h2>
     <h2>{{user}}</h2>
   </div>
@@ -31,9 +31,8 @@ export default {
     }
   },
   methods: {
-    async register () {
-      let res = await AuthService.register(this.credentials)
-      this.user = res.data.user
+    async login () {
+      let res = await AuthService.login(this.credentials)
       this.error = res.data.error
     }
   }

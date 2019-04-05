@@ -13,11 +13,11 @@ require('./routes')(app);
 
 // If you want Sequelize to automatically create the table (or modify it as needed) according to your model definition, you can use the sync method
 console.log('Syncronyzing ...');
-sequelize.sync({
-    force: config.db.sqlite.forceSync // Set force : false When force is true it's mean you are allowing sequelize to drop existing tables and create new ones
-  })
+sequelize
+  // Set force : false When force is true it's mean you are allowing sequelize to drop existing tables and create new ones
+  .sync({force: config.db.sqlite.forceSync})
   .then(() => {
     console.log('Database & tables created!')
     app.listen(config.port);
-    console.log('Express server up and listening on ' + config.port +'...');
+    console.log('Express server up and listening on' , config.port , '...');
   })
